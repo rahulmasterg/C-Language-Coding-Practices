@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+
+int main()
+{
+    char str[10];
+    
+    scanf("%s", &str);
+    
+    int len = strlen(str);
+    int left = 0, right = len-1;
+    bool flag;
+    
+    while(left<right){
+        if(str[left]!=str[right]){
+            flag = true;
+            break;
+        }
+        left++;
+        right--;
+    }
+    
+    if(flag){
+        printf("Not Palindrome");
+    }else{
+        printf("Palindrome");
+    }
+
+    return 0;
+}
+
